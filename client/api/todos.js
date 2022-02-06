@@ -6,7 +6,6 @@ export const postTodo = info =>
     .send(info)
     .then(handleSuccess)
     .catch(handleError);
-
 export const getTodos = () =>
   request.get('/api/todos')
     .then(handleSuccess)

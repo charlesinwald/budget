@@ -53,6 +53,8 @@ router.put('/', requireAuth, (req, res) => {
       res.status(400).send({ message: 'Update todo failed', err });
     } else {
       todo.text = req.body.text;
+      todo.price = req.body.price;
+      todo.category = req.body.category;
       todo.updated_at = Date.now();
       todo.save((err, savedTodo) => {
         if (err) {

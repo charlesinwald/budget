@@ -40,4 +40,15 @@
       max-width: 400px;
     }
   }
+  .category-dropdown-container {
+    display: flex;
+  }
+  .category-dropdown {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .left-label {
+    text-align: left;
+  }
 }

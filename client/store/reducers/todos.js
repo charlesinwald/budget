@@ -15,6 +15,8 @@ export function todo(state = {
       return update(state, {
         id: { $set: action.id },
         text: { $set: action.text },
+        price: { $set: action.price },
+        category: { $set: action.category },
         createdAt: { $set: action.createdAt },
       });
     case TOGGLE_COMPLETE_TODO:
@@ -24,6 +26,8 @@ export function todo(state = {
     case UPDATE_TODO:
       return update(state, {
         text: { $set: action.text },
+        price: { $set: action.price },
+        category: { $set: action.category },
         updatedAt: { $set: action.updatedAt },
       });
     default:
